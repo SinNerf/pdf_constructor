@@ -1,0 +1,72 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="PdfTool.MainWindow"
+        Title="PDF Tool"
+        Width="480"
+        SizeToContent="Height"
+        MinWidth="420"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False">
+  <StackPanel Margin="16,12,16,14">
+    <StackPanel Orientation="Horizontal">
+      <Button x:Name="ShowEncrypt" Classes="tab on" Content="Encrypt" Click="ShowEncryptPage"/>
+      <Button x:Name="ShowMeta" Classes="tab" Content="Metadata" Click="ShowMetaPage"/>
+    </StackPanel>
+
+    <Border x:Name="EncryptPage" Classes="box">
+      <StackPanel Spacing="8">
+        <Grid ColumnDefinitions="92,*" RowDefinitions="Auto,Auto,Auto,Auto" RowSpacing="7">
+          <TextBlock Classes="lbl" Text="File"/>
+          <Grid Grid.Column="1" ColumnDefinitions="*,Auto">
+            <TextBox x:Name="EncryptPathBox"/>
+            <Button Grid.Column="1" Classes="line" Margin="6,0,0,0" Content="Browse" Click="OnBrowseEncrypt"/>
+          </Grid>
+          <TextBlock Grid.Row="1" Classes="lbl" Text="Password"/>
+          <TextBox Grid.Row="1" Grid.Column="1" x:Name="EncryptOpenBox" PasswordChar="*"/>
+          <TextBlock Grid.Row="2" Classes="lbl" Text="User"/>
+          <TextBox Grid.Row="2" Grid.Column="1" x:Name="EncryptUserBox" PasswordChar="*"/>
+          <TextBlock Grid.Row="3" Classes="lbl" Text="Owner"/>
+          <TextBox Grid.Row="3" Grid.Column="1" x:Name="EncryptOwnerBox" PasswordChar="*"/>
+        </Grid>
+        <StackPanel Orientation="Horizontal" Spacing="14" Margin="0,2,0,0">
+          <CheckBox x:Name="AllowPrintBox" Content="Print" IsChecked="True"/>
+          <CheckBox x:Name="AllowCopyBox" Content="Copy" IsChecked="True"/>
+          <CheckBox x:Name="AllowEditBox" Content="Edit" IsChecked="True"/>
+        </StackPanel>
+        <Button Classes="go" Content="Save" Click="OnEncrypt"/>
+      </StackPanel>
+    </Border>
+
+    <Border x:Name="MetaPage" Classes="box" IsVisible="False">
+      <StackPanel Spacing="8">
+        <Grid ColumnDefinitions="92,*" RowDefinitions="Auto,Auto" RowSpacing="7">
+          <TextBlock Classes="lbl" Text="File"/>
+          <Grid Grid.Column="1" ColumnDefinitions="*,Auto,Auto">
+            <TextBox x:Name="MetaPathBox"/>
+            <Button Grid.Column="1" Classes="line" Margin="6,0,0,0" Content="Browse" Click="OnBrowseMeta"/>
+            <Button Grid.Column="2" Classes="line" Margin="6,0,0,0" Content="Load" Click="OnLoadMeta"/>
+          </Grid>
+          <TextBlock Grid.Row="1" Classes="lbl" Text="Password"/>
+          <TextBox Grid.Row="1" Grid.Column="1" x:Name="MetaOpenBox" PasswordChar="*"/>
+        </Grid>
+        <TextBlock x:Name="XmpText" Foreground="#777" FontSize="12" TextWrapping="Wrap"/>
+        <Grid ColumnDefinitions="92,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto" RowSpacing="7">
+          <TextBlock Classes="lbl" Text="Title"/>
+          <TextBox Grid.Column="1" x:Name="TitleBox"/>
+          <TextBlock Grid.Row="1" Classes="lbl" Text="Author"/>
+          <TextBox Grid.Row="1" Grid.Column="1" x:Name="AuthorBox"/>
+          <TextBlock Grid.Row="2" Classes="lbl" Text="Subject"/>
+          <TextBox Grid.Row="2" Grid.Column="1" x:Name="SubjectBox"/>
+          <TextBlock Grid.Row="3" Classes="lbl" Text="Keywords"/>
+          <TextBox Grid.Row="3" Grid.Column="1" x:Name="KeywordsBox"/>
+          <TextBlock Grid.Row="4" Classes="lbl" Text="Creator"/>
+          <TextBox Grid.Row="4" Grid.Column="1" x:Name="CreatorBox"/>
+        </Grid>
+        <CheckBox x:Name="WriteXmpBox" Content="Also update XMP" IsChecked="True"/>
+        <Button Classes="go" Content="Save" Click="OnSaveMeta"/>
+      </StackPanel>
+    </Border>
+
+    <TextBlock x:Name="StatusText" Margin="0,8,0,0" Foreground="#777" FontSize="12" TextWrapping="Wrap"/>
+  </StackPanel>
+</Window>

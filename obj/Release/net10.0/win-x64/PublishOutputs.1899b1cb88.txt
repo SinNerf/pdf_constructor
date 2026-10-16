@@ -1,0 +1,3 @@
+/home/dyieus/Documents/PdfTool/dist/stage/win-x64/libHarfBuzzSharp.pdb
+/home/dyieus/Documents/PdfTool/dist/stage/win-x64/libSkiaSharp.pdb
+/home/dyieus/Documents/PdfTool/dist/stage/win-x64/PdfTool.exe

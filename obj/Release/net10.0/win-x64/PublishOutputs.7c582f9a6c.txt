@@ -1,0 +1,3 @@
+/tmp/pdftool-win/libHarfBuzzSharp.pdb
+/tmp/pdftool-win/libSkiaSharp.pdb
+/tmp/pdftool-win/PdfTool.exe

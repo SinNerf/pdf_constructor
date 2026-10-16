@@ -1,0 +1,85 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="PdfTool.App"
+             RequestedThemeVariant="Dark">
+  <Application.Styles>
+    <FluentTheme>
+      <FluentTheme.Palettes>
+        <ColorPaletteResources x:Key="Dark" Accent="#2A9D96" RegionColor="#191919"/>
+      </FluentTheme.Palettes>
+    </FluentTheme>
+    <Style Selector="Window">
+      <Setter Property="Background" Value="#191919"/>
+      <Setter Property="Foreground" Value="#d2d2d2"/>
+      <Setter Property="FontSize" Value="13"/>
+    </Style>
+    <Style Selector="TextBox">
+      <Setter Property="Background" Value="#191919"/>
+      <Setter Property="Foreground" Value="#e4e4e4"/>
+      <Setter Property="BorderBrush" Value="#3c3c3c"/>
+      <Setter Property="BorderThickness" Value="1"/>
+      <Setter Property="CornerRadius" Value="0"/>
+      <Setter Property="MinHeight" Value="26"/>
+      <Setter Property="Padding" Value="6,2"/>
+    </Style>
+    <Style Selector="TextBox:focus">
+      <Setter Property="BorderBrush" Value="#2A9D96"/>
+    </Style>
+    <Style Selector="TextBlock.lbl">
+      <Setter Property="Foreground" Value="#9a9a9a"/>
+      <Setter Property="VerticalAlignment" Value="Center"/>
+      <Setter Property="Margin" Value="0,0,8,0"/>
+    </Style>
+    <Style Selector="Button.tab">
+      <Setter Property="Background" Value="#191919"/>
+      <Setter Property="Foreground" Value="#8a8a8a"/>
+      <Setter Property="BorderBrush" Value="#3c3c3c"/>
+      <Setter Property="BorderThickness" Value="1"/>
+      <Setter Property="CornerRadius" Value="0"/>
+      <Setter Property="Padding" Value="16,6"/>
+      <Setter Property="Margin" Value="0,0,-1,0"/>
+    </Style>
+    <Style Selector="Button.tab:pointerover">
+      <Setter Property="Foreground" Value="#d2d2d2"/>
+    </Style>
+    <Style Selector="Button.tab.on">
+      <Setter Property="Foreground" Value="#d8d8d8"/>
+      <Setter Property="BorderBrush" Value="#2A9D96"/>
+      <Setter Property="Background" Value="#141414"/>
+    </Style>
+    <Style Selector="Button.line">
+      <Setter Property="Background" Value="#191919"/>
+      <Setter Property="Foreground" Value="#d2d2d2"/>
+      <Setter Property="BorderBrush" Value="#3c3c3c"/>
+      <Setter Property="BorderThickness" Value="1"/>
+      <Setter Property="CornerRadius" Value="0"/>
+      <Setter Property="Padding" Value="10,4"/>
+    </Style>
+    <Style Selector="Button.line:pointerover">
+      <Setter Property="BorderBrush" Value="#2A9D96"/>
+    </Style>
+    <Style Selector="Button.go">
+      <Setter Property="Background" Value="#191919"/>
+      <Setter Property="Foreground" Value="#3dbeb4"/>
+      <Setter Property="BorderBrush" Value="#2A9D96"/>
+      <Setter Property="BorderThickness" Value="1"/>
+      <Setter Property="CornerRadius" Value="0"/>
+      <Setter Property="Padding" Value="16,5"/>
+      <Setter Property="HorizontalAlignment" Value="Left"/>
+      <Setter Property="Margin" Value="0,10,0,0"/>
+    </Style>
+    <Style Selector="Button.go:pointerover">
+      <Setter Property="Background" Value="#1d3331"/>
+    </Style>
+    <Style Selector="CheckBox">
+      <Setter Property="Foreground" Value="#c6c6c6"/>
+    </Style>
+    <Style Selector="Border.box">
+      <Setter Property="Background" Value="#141414"/>
+      <Setter Property="BorderBrush" Value="#3c3c3c"/>
+      <Setter Property="BorderThickness" Value="1"/>
+      <Setter Property="Padding" Value="12,10"/>
+      <Setter Property="Margin" Value="0,8,0,0"/>
+    </Style>
+  </Application.Styles>
+</Application>
